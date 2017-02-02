@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include "Matrix.h"
+
+using namespace std;
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    vector<vector<int>> a = {{0,1},{2,3}};
+    Matrix<int> m(2, 2);
+    m = Matrix<int>(a);
+    vector<int> l = m.getColumn(0);
+    for (int i = 0; i<l.size(); ++i) {
+        cout << l[i] << ' ';
+    }
+    cout << endl;
+    cout << m;
     return 0;
 }
